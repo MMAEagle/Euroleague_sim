@@ -54,10 +54,10 @@ st.sidebar.header("Πρόβλεψη Αγώνων")
 predictions = {}
 
 # Δημιουργία των Selectboxes στο πλάι
-for home, away in all_matches:
-    predictions[(home, away)] = st.sidebar.selectbox(
+for a, home, away in all_matches:
+    predictions[(a, home, away)] = st.sidebar.selectbox(
         f"{home} vs {away}", 
-        [home, away], 
+        [a, home, away], 
         key=f"{home}_{away}"
     )
 
@@ -66,11 +66,11 @@ for home, away in all_matches:
 current_standings = st.session_state.standings.copy()
 current_h2h = {k: v.copy() for k, v in st.session_state.h2h_results.items()}
 
-for (home, away), winner in predictions.items():
+for (a, home, away), winner in predictions.items():
     current_standings[winner] += 1
-    key = tuple(sorted((home, away)))
+    key = tuple(sorted((a, home, away)))
     if key not in current_h2h:
-        current_h2h[key] = {home: 0, away: 0}
+        current_h2h[key] = {a:0, home: 0, away: 0}
     current_h2h[key][winner] += 1
 
 # --- 4. ΣΥΝΑΡΤΗΣΗ ΤΑΞΙΝΟΜΗΣΗΣ ---

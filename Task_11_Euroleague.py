@@ -42,12 +42,12 @@ if 'h2h_results' not in st.session_state:
 
 # --- 2. ΟΙ ΑΓΩΝΕΣ ---
 all_matches = [
-    ('Asvel', 'Oly'), ('Baskonia', 'Real'), ('Bologna', 'Valencia'),
-    ('Hapoel', 'Fener'), ('Zalgiris', 'Dubai'), ('Rstar', 'Pari'), 
-    ('Oly', 'Real'), ('Barca', 'Pao'), ('Valencia', 'Armani'), 
-    ('Baskonia', 'Macabi'), ('Monaco', 'Asvel'), ('Hapoel', 'Oly'), ('Fener', 'Real'), ('Valencia', 'Pao'), ('Pari', 'Macabi'), ('Monaco', 'Barca'), 
-				('Dubai', 'Efes'), ('Partizan', 'Zalgiris'), ('Asvel', 'Rstar'), ('Macabi', 'Hapoel'), ('Asvel','Fener'), ('Macabi','Bologna'), ('Oly','Armani'), ('Real','Rstar'), ('Dubai','Valencia'), 
-				('Zalgiris','Pari'), ('Monaco','Hapoel'), ('Pao','Efes'), ('Barca','Bayern')
+    ('none', 'Asvel', 'Oly'), ('none','Baskonia', 'Real'), ('none','Bologna', 'Valencia'),
+    ('none','Hapoel', 'Fener'), ('none','Zalgiris', 'Dubai'), ('none','Rstar', 'Pari'), 
+    ('none','Oly', 'Real'), ('none','Barca', 'Pao'), ('none','Valencia', 'Armani'), 
+    ('none','Baskonia', 'Macabi'), ('none','Monaco', 'Asvel'), ('none','Hapoel', 'Oly'), ('none','Fener', 'Real'), ('none','Valencia', 'Pao'), ('none','Pari', 'Macabi'), ('none','Monaco', 'Barca'), 
+				('none','Dubai', 'Efes'), ('none','Partizan', 'Zalgiris'), ('none','Asvel', 'Rstar'), ('none','Macabi', 'Hapoel'), ('none','Asvel','Fener'), ('none','Macabi','Bologna'), ('none','Oly','Armani'), ('none','Real','Rstar'), ('none','Dubai','Valencia'), 
+				('none','Zalgiris','Pari'), ('none','Monaco','Hapoel'), ('none','Pao','Efes'), ('none','Barca','Bayern')
 ]
 
 st.sidebar.header("Πρόβλεψη Αγώνων")

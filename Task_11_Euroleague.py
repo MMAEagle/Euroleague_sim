@@ -45,7 +45,9 @@ all_matches = [
     ('Asvel', 'Oly'), ('Baskonia', 'Real'), ('Bologna', 'Valencia'),
     ('Hapoel', 'Fener'), ('Zalgiris', 'Dubai'), ('Rstar', 'Pari'), 
     ('Oly', 'Real'), ('Barca', 'Pao'), ('Valencia', 'Armani'), 
-    ('Baskonia', 'Macabi'), ('Monaco', 'Asvel')
+    ('Baskonia', 'Macabi'), ('Monaco', 'Asvel'), ('Hapoel', 'Oly'), ('Fener', 'Real'), ('Valencia', 'Pao'), ('Pari', 'Macabi'), ('Monaco', 'Barca'), 
+				('Dubai', 'Efes'), ('Partizan', 'Zalgiris'), ('Asvel', 'Rstar'), ('Macabi', 'Hapoel'), ('Asvel','Fener'), ('Macabi','Bologna'), ('Oly','Armani'), ('Real','Rstar'), ('Dubai','Valencia'), 
+				('Zalgiris','Pari'), ('Monaco','Hapoel'), ('Pao','Efes'), ('Barca','Bayern')
 ]
 
 st.sidebar.header("Πρόβλεψη Αγώνων")

@@ -9,7 +9,7 @@ if 'standings' not in st.session_state:
         'Fener':23, 'Oly':22, 'Real':22, 'Hapoel':21, 'Valencia':21, 'Zalgiris':21, 
         'Pao': 20, 'Barca':20, 'Rstar': 19, 'Monaco': 19, 'Macabi': 18, 'Dubai':18, 
         'Armani': 0, 'Partizan': 0, 'Bayern': 0, 'Pari': 0, 'Bologna': 0, 
-        'Baskonia': 0, 'Efes': 0, 'Asvel': 0
+        'Baskonia': 0, 'Efes': 0, 'Asvel': 0, 'none': -10
     }
 
 if 'h2h_results' not in st.session_state:

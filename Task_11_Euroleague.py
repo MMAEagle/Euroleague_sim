@@ -6,7 +6,7 @@ st.title("Euroleague Simulator 2026 🏀")
 # --- 1. ΑΡΧΙΚΑ ΔΕΔΟΜΕΝΑ (ΜΟΝΟ ΜΙΑ ΦΟΡΑ) ---
 if 'standings' not in st.session_state:
     st.session_state.standings = {
-        'Fener':23, 'Oly':22, 'Real':22, 'Hapoel':21, 'Valencia':21, 'Zalgiris':21, 
+        'Fener':23, 'Oly':23, 'Real':22, 'Hapoel':21, 'Valencia':22, 'Zalgiris':21, 
         'Pao': 20, 'Barca':20, 'Rstar': 19, 'Monaco': 19, 'Macabi': 18, 'Dubai':18, 
         'Armani': 0, 'Partizan': 0, 'Bayern': 0, 'Pari': 0, 'Bologna': 0, 
         'Baskonia': 0, 'Efes': 0, 'Asvel': 0, 'none': -10
@@ -37,13 +37,21 @@ if 'h2h_results' not in st.session_state:
         tuple(sorted(('Rstar', 'Dubai'))): {'Rstar': 1, 'Dubai': 1},
         tuple(sorted(('Monaco', 'Macabi'))): {'Monaco': 1, 'Macabi': 1},
         tuple(sorted(('Monaco', 'Dubai'))): {'Monaco': 1, 'Dubai': 1},
-        tuple(sorted(('Macabi', 'Dubai'))): {'Macabi': 2, 'Dubai': 0}
+        tuple(sorted(('Macabi', 'Dubai'))): {'Macabi': 2, 'Dubai': 0},
+		tuple(sorted(('Real', 'Valencia'))): {'Real': 1, 'Valencia': 1},
+		tuple(sorted(('Real', 'Hapoel'))): {'Real': 2, 'Hapoel': 0},
+		tuple(sorted(('Real', 'Zalgiris'))): {'Real': 1, 'Zalgiris': 1},
+		tuple(sorted(('Real', 'Barcelona'))): {'Real': 2, 'Barcelona': 0},
+		tuple(sorted(('Real', 'Pao'))): {'Real': 0, 'Pao': 2},
+		tuple(sorted(('Fener', 'Valencia'))): {'Fener': 1, 'Valencia': 1},
+		tuple(sorted(('Fener', 'Hapoel'))): {'Fener': 1, 'Hapoel': 0},
+		tuple(sorted(('Fener', 'Zalgiris'))): {'Fener': 0, 'Zalgiris': 2},
+		tuple(sorted(('Fener', 'Barcelona'))): {'Fener': 2, 'Barcelona': 0},
+		tuple(sorted(('Fener', 'Pao'))): {'Fener': 1, 'Pao': 1}
     }
 
 # --- 2. ΟΙ ΑΓΩΝΕΣ ---
-all_matches = [
-    ('none', 'Asvel', 'Oly'), ('none','Baskonia', 'Real'), ('none','Bologna', 'Valencia'),
-    ('none','Hapoel', 'Fener'), ('none','Zalgiris', 'Dubai'), ('none','Rstar', 'Pari'), 
+all_matches = [('none','Hapoel', 'Fener'), ('none','Zalgiris', 'Dubai'), ('none','Rstar', 'Pari'), 
     ('none','Oly', 'Real'), ('none','Barca', 'Pao'), ('none','Valencia', 'Armani'), 
     ('none','Baskonia', 'Macabi'), ('none','Monaco', 'Asvel'), ('none','Hapoel', 'Oly'), ('none','Fener', 'Real'), ('none','Valencia', 'Pao'), ('none','Pari', 'Macabi'), ('none','Monaco', 'Barca'), 
 				('none','Dubai', 'Efes'), ('none','Partizan', 'Zalgiris'), ('none','Asvel', 'Rstar'), ('none','Macabi', 'Hapoel'), ('none','Asvel','Fener'), ('none','Macabi','Bologna'), ('none','Oly','Armani'), ('none','Real','Rstar'), ('none','Dubai','Valencia'), 

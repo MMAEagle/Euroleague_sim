@@ -47,7 +47,9 @@ if 'h2h_results' not in st.session_state:
 		tuple(sorted(('Fener', 'Hapoel'))): {'Fener': 1, 'Hapoel': 0},
 		tuple(sorted(('Fener', 'Zalgiris'))): {'Fener': 0, 'Zalgiris': 2},
 		tuple(sorted(('Fener', 'Barcelona'))): {'Fener': 2, 'Barcelona': 0},
-		tuple(sorted(('Fener', 'Pao'))): {'Fener': 1, 'Pao': 1}
+		tuple(sorted(('Macabi', 'Pao'))): {'Macabi': 1, 'Pao': 1},
+		tuple(sorted(('Macabi', 'Barca'))): {'Macabi': 0, 'Barca': 2},
+		tuple(sorted(('Macabi', 'Hapoel'))): {'Macabi': 1, 'Hapoel': 0}
     }
 
 # --- 2. ΟΙ ΑΓΩΝΕΣ ---

@@ -41,7 +41,7 @@ if 'h2h_results' not in st.session_state:
 		tuple(sorted(('Real', 'Valencia'))): {'Real': 1, 'Valencia': 1},
 		tuple(sorted(('Real', 'Hapoel'))): {'Real': 2, 'Hapoel': 0},
 		tuple(sorted(('Real', 'Zalgiris'))): {'Real': 1, 'Zalgiris': 1},
-		tuple(sorted(('Real', 'Barcelona'))): {'Real': 2, 'Barcelona': 0},
+		tuple(sorted(('Real', 'Barca'))): {'Real': 2, 'Barca': 0},
 		tuple(sorted(('Real', 'Pao'))): {'Real': 0, 'Pao': 2},
 		tuple(sorted(('Fener', 'Valencia'))): {'Fener': 1, 'Valencia': 1},
 		tuple(sorted(('Fener', 'Hapoel'))): {'Fener': 1, 'Hapoel': 0},
@@ -78,10 +78,12 @@ current_h2h = {k: v.copy() for k, v in st.session_state.h2h_results.items()}
 
 for (a, home, away), winner in predictions.items():
     current_standings[winner] += 1
-    key = tuple(sorted((a, home, away)))
-    if key not in current_h2h:
-        current_h2h[key] = {a:0, home: 0, away: 0}
-    current_h2h[key][winner] += 1
+	key = tuple(sorted((home, away)))
+	if key not in current_h2h:
+    	current_h2h[key] = {home: 0, away: 0}
+
+	if winner in (home, away):
+    	current_h2h[key][winner] += 1
 
 # --- 4. ΣΥΝΑΡΤΗΣΗ ΤΑΞΙΝΟΜΗΣΗΣ ---
 def euroleague_sort(team):

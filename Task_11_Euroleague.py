@@ -77,13 +77,14 @@ current_standings = st.session_state.standings.copy()
 current_h2h = {k: v.copy() for k, v in st.session_state.h2h_results.items()}
 
 for (a, home, away), winner in predictions.items():
-    current_standings[winner] += 1
-	key = tuple(sorted((home, away)))
-	if key not in current_h2h:
-    	current_h2h[key] = {home: 0, away: 0}
+    if winner in (home, away):
+        current_standings[winner] += 1
 
-	if winner in (home, away):
-    	current_h2h[key][winner] += 1
+        key = tuple(sorted((home, away)))
+        if key not in current_h2h:
+            current_h2h[key] = {home: 0, away: 0}
+
+        current_h2h[key][winner] += 1
 
 # --- 4. ΣΥΝΑΡΤΗΣΗ ΤΑΞΙΝΟΜΗΣΗΣ ---
 def euroleague_sort(team):
